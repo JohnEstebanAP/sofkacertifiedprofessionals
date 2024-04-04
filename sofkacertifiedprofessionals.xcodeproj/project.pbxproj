@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		778C4D672BBE005200BAA438 /* TabViewGeneri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778C4D662BBE005200BAA438 /* TabViewGeneri.swift */; };
+		778C4D692BBE018500BAA438 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778C4D682BBE018500BAA438 /* MenuView.swift */; };
+		778C4D6B2BBE032A00BAA438 /* SearchablePeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778C4D6A2BBE032A00BAA438 /* SearchablePeople.swift */; };
+		778C4D6D2BBE091800BAA438 /* ViewModelHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778C4D6C2BBE091800BAA438 /* ViewModelHome.swift */; };
 		77C027C42BBB491C00733650 /* sofkacertifiedprofessionalsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C027C32BBB491C00733650 /* sofkacertifiedprofessionalsApp.swift */; };
 		77C027CA2BBB491E00733650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77C027C92BBB491E00733650 /* Assets.xcassets */; };
 		77C027CD2BBB491E00733650 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77C027CC2BBB491E00733650 /* Preview Assets.xcassets */; };
@@ -15,6 +19,10 @@
 		77C027E32BBB491F00733650 /* sofkacertifiedprofessionalsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C027E22BBB491F00733650 /* sofkacertifiedprofessionalsUITestsLaunchTests.swift */; };
 		77C027F62BBB6C0E00733650 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C027F52BBB6C0E00733650 /* Home.swift */; };
 		77C027F82BBB6C5300733650 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C027F72BBB6C5300733650 /* NavigationController.swift */; };
+		77C027FC2BBCBD1800733650 /* SearchPeoplePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C027FB2BBCBD1800733650 /* SearchPeoplePage.swift */; };
+		77C027FF2BBCBEDB00733650 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C027FE2BBCBEDB00733650 /* TopBar.swift */; };
+		77F80EC12BBDA045008D8BC5 /* sofkiano.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F80EC02BBDA045008D8BC5 /* sofkiano.swift */; };
+		77F80EC42BBDA2CA008D8BC5 /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F80EC32BBDA2CA008D8BC5 /* CloudService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		778C4D662BBE005200BAA438 /* TabViewGeneri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewGeneri.swift; sourceTree = "<group>"; };
+		778C4D682BBE018500BAA438 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		778C4D6A2BBE032A00BAA438 /* SearchablePeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchablePeople.swift; sourceTree = "<group>"; };
+		778C4D6C2BBE091800BAA438 /* ViewModelHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelHome.swift; sourceTree = "<group>"; };
 		77C027C02BBB491C00733650 /* sofkacertifiedprofessionals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sofkacertifiedprofessionals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C027C32BBB491C00733650 /* sofkacertifiedprofessionalsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sofkacertifiedprofessionalsApp.swift; sourceTree = "<group>"; };
 		77C027C92BBB491E00733650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +58,10 @@
 		77C027E22BBB491F00733650 /* sofkacertifiedprofessionalsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sofkacertifiedprofessionalsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		77C027F52BBB6C0E00733650 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		77C027F72BBB6C5300733650 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		77C027FB2BBCBD1800733650 /* SearchPeoplePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPeoplePage.swift; sourceTree = "<group>"; };
+		77C027FE2BBCBEDB00733650 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
+		77F80EC02BBDA045008D8BC5 /* sofkiano.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sofkiano.swift; sourceTree = "<group>"; };
+		77F80EC32BBDA2CA008D8BC5 /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +112,7 @@
 		77C027C22BBB491C00733650 /* sofkacertifiedprofessionals */ = {
 			isa = PBXGroup;
 			children = (
+				77F80EC22BBDA2B4008D8BC5 /* model */,
 				77C027F32BBB6BDE00733650 /* modelData */,
 				77C027F22BBB6BCA00733650 /* ui */,
 				77C027F12BBB6BB800733650 /* ViewModels */,
@@ -135,6 +152,7 @@
 		77C027F12BBB6BB800733650 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				778C4D6C2BBE091800BAA438 /* ViewModelHome.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -142,6 +160,8 @@
 		77C027F22BBB6BCA00733650 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				77C027FD2BBCBD5C00733650 /* components */,
+				77C027FA2BBCBCEA00733650 /* search */,
 				77C027F42BBB6BF200733650 /* home */,
 			);
 			path = ui;
@@ -150,6 +170,7 @@
 		77C027F32BBB6BDE00733650 /* modelData */ = {
 			isa = PBXGroup;
 			children = (
+				77F80EC02BBDA045008D8BC5 /* sofkiano.swift */,
 			);
 			path = modelData;
 			sourceTree = "<group>";
@@ -160,6 +181,33 @@
 				77C027F52BBB6C0E00733650 /* Home.swift */,
 			);
 			path = home;
+			sourceTree = "<group>";
+		};
+		77C027FA2BBCBCEA00733650 /* search */ = {
+			isa = PBXGroup;
+			children = (
+				77C027FB2BBCBD1800733650 /* SearchPeoplePage.swift */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		77C027FD2BBCBD5C00733650 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				77C027FE2BBCBEDB00733650 /* TopBar.swift */,
+				778C4D662BBE005200BAA438 /* TabViewGeneri.swift */,
+				778C4D682BBE018500BAA438 /* MenuView.swift */,
+				778C4D6A2BBE032A00BAA438 /* SearchablePeople.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		77F80EC22BBDA2B4008D8BC5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				77F80EC32BBDA2CA008D8BC5 /* CloudService.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,8 +341,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				77C027F62BBB6C0E00733650 /* Home.swift in Sources */,
+				77C027FC2BBCBD1800733650 /* SearchPeoplePage.swift in Sources */,
+				778C4D672BBE005200BAA438 /* TabViewGeneri.swift in Sources */,
+				77C027FF2BBCBEDB00733650 /* TopBar.swift in Sources */,
+				778C4D692BBE018500BAA438 /* MenuView.swift in Sources */,
 				77C027F82BBB6C5300733650 /* NavigationController.swift in Sources */,
+				778C4D6B2BBE032A00BAA438 /* SearchablePeople.swift in Sources */,
+				77F80EC42BBDA2CA008D8BC5 /* CloudService.swift in Sources */,
 				77C027C42BBB491C00733650 /* sofkacertifiedprofessionalsApp.swift in Sources */,
+				77F80EC12BBDA045008D8BC5 /* sofkiano.swift in Sources */,
+				778C4D6D2BBE091800BAA438 /* ViewModelHome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
