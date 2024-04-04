@@ -80,38 +80,20 @@ struct ListViewDetailSofkianos: View {
         ScrollView(.vertical, showsIndicators: false){
             VStack{
                 ForEach(listSofkianos, id: \.id){sofkiano in
-                    VStack{
-                        ZStack{
-                            Image(sofkiano.img).resizable().scaledToFit()
-                            VStack{
-                                Spacer()
-                                HStack(){
-                                    Spacer()
-                                    ForEach(sofkiano.certified, id: \.count){certified in
-                                        Image(
-                                            certified == CloudService.amazonWebServices.rawValue
-                                            ? "logo_aws"
-                                            : certified == CloudService.microsoftAzure.rawValue
-                                            ?"logo_azure"
-                                            :"logo_google_cloud"
-                                        ).resizable().scaledToFit()
-                                            .padding(.bottom, 10)
-                                            .frame(width: 70)
-                                    }
-                                    Spacer().frame(width: 10)
-                                }
+                    NavigationLink(destination:  DetailPeople(id: sofkiano.id)){
+                        VStack{
+                            ImgPeopleAndService(image: sofkiano.img, listCertified: sofkiano.certified)
+                            
+                            Text("\(sofkiano.name) \(sofkiano.lasName)").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).font(.system(size: 20))
+                            ForEach(sofkiano.certified, id: \.count){ certified in
+                                Text(certified).foregroundColor(Color(red: 5/255, green: 7/255, blue: 150/255))
                             }
+                            Text(sofkiano.area).fontWeight(.light).font(.system(size: 15))
                         }
-                        
-                        Text("\(sofkiano.name) \(sofkiano.lasName)").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).font(.system(size: 20))
-                        ForEach(sofkiano.certified, id: \.count){ certified in
-                            Text(certified).foregroundColor(Color(red: 5/255, green: 7/255, blue: 150/255))
-                        }
-                        Text(sofkiano.area).fontWeight(.light).font(.system(size: 15))
-                    }
-                    .background(.white.opacity(0.9))
-                    .cornerRadius(20)
+                        .background(.white.opacity(0.9))
+                        .cornerRadius(20)
                     .padding()
+                    }
                 }
             }.padding(.horizontal)
         }

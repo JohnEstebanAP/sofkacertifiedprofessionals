@@ -23,6 +23,9 @@
 		77C027FF2BBCBEDB00733650 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C027FE2BBCBEDB00733650 /* TopBar.swift */; };
 		77F80EC12BBDA045008D8BC5 /* sofkiano.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F80EC02BBDA045008D8BC5 /* sofkiano.swift */; };
 		77F80EC42BBDA2CA008D8BC5 /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F80EC32BBDA2CA008D8BC5 /* CloudService.swift */; };
+		77FEF1842BBF026B0008B590 /* DetailPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FEF1832BBF026B0008B590 /* DetailPeople.swift */; };
+		77FEF1862BBF15F70008B590 /* Languaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FEF1852BBF15F70008B590 /* Languaje.swift */; };
+		77FEF1882BBF1A900008B590 /* ImgPeopleAndService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FEF1872BBF1A900008B590 /* ImgPeopleAndService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		77C027FE2BBCBEDB00733650 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		77F80EC02BBDA045008D8BC5 /* sofkiano.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sofkiano.swift; sourceTree = "<group>"; };
 		77F80EC32BBDA2CA008D8BC5 /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
+		77FEF1832BBF026B0008B590 /* DetailPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPeople.swift; sourceTree = "<group>"; };
+		77FEF1852BBF15F70008B590 /* Languaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languaje.swift; sourceTree = "<group>"; };
+		77FEF1872BBF1A900008B590 /* ImgPeopleAndService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgPeopleAndService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,7 @@
 		77C027F22BBB6BCA00733650 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				77FEF1822BBF02450008B590 /* detailpeople */,
 				77C027FD2BBCBD5C00733650 /* components */,
 				77C027FA2BBCBCEA00733650 /* search */,
 				77C027F42BBB6BF200733650 /* home */,
@@ -198,6 +205,7 @@
 				778C4D662BBE005200BAA438 /* TabViewGeneri.swift */,
 				778C4D682BBE018500BAA438 /* MenuView.swift */,
 				778C4D6A2BBE032A00BAA438 /* SearchablePeople.swift */,
+				77FEF1872BBF1A900008B590 /* ImgPeopleAndService.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -206,8 +214,17 @@
 			isa = PBXGroup;
 			children = (
 				77F80EC32BBDA2CA008D8BC5 /* CloudService.swift */,
+				77FEF1852BBF15F70008B590 /* Languaje.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		77FEF1822BBF02450008B590 /* detailpeople */ = {
+			isa = PBXGroup;
+			children = (
+				77FEF1832BBF026B0008B590 /* DetailPeople.swift */,
+			);
+			path = detailpeople;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,7 +366,10 @@
 				778C4D6B2BBE032A00BAA438 /* SearchablePeople.swift in Sources */,
 				77F80EC42BBDA2CA008D8BC5 /* CloudService.swift in Sources */,
 				77C027C42BBB491C00733650 /* sofkacertifiedprofessionalsApp.swift in Sources */,
+				77FEF1842BBF026B0008B590 /* DetailPeople.swift in Sources */,
 				77F80EC12BBDA045008D8BC5 /* sofkiano.swift in Sources */,
+				77FEF1862BBF15F70008B590 /* Languaje.swift in Sources */,
+				77FEF1882BBF1A900008B590 /* ImgPeopleAndService.swift in Sources */,
 				778C4D6D2BBE091800BAA438 /* ViewModelHome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
