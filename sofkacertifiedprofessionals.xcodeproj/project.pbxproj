@@ -26,6 +26,7 @@
 		77FEF1842BBF026B0008B590 /* DetailPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FEF1832BBF026B0008B590 /* DetailPeople.swift */; };
 		77FEF1862BBF15F70008B590 /* Languaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FEF1852BBF15F70008B590 /* Languaje.swift */; };
 		77FEF1882BBF1A900008B590 /* ImgPeopleAndService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FEF1872BBF1A900008B590 /* ImgPeopleAndService.swift */; };
+		77FEF18B2BC04C250008B590 /* GraphisBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FEF18A2BC04C250008B590 /* GraphisBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		77FEF1832BBF026B0008B590 /* DetailPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPeople.swift; sourceTree = "<group>"; };
 		77FEF1852BBF15F70008B590 /* Languaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languaje.swift; sourceTree = "<group>"; };
 		77FEF1872BBF1A900008B590 /* ImgPeopleAndService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgPeopleAndService.swift; sourceTree = "<group>"; };
+		77FEF18A2BC04C250008B590 /* GraphisBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphisBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 		77C027F42BBB6BF200733650 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				77FEF1892BC04C080008B590 /* componets */,
 				77C027F52BBB6C0E00733650 /* Home.swift */,
 			);
 			path = home;
@@ -225,6 +228,14 @@
 				77FEF1832BBF026B0008B590 /* DetailPeople.swift */,
 			);
 			path = detailpeople;
+			sourceTree = "<group>";
+		};
+		77FEF1892BC04C080008B590 /* componets */ = {
+			isa = PBXGroup;
+			children = (
+				77FEF18A2BC04C250008B590 /* GraphisBar.swift */,
+			);
+			path = componets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +380,7 @@
 				77FEF1842BBF026B0008B590 /* DetailPeople.swift in Sources */,
 				77F80EC12BBDA045008D8BC5 /* sofkiano.swift in Sources */,
 				77FEF1862BBF15F70008B590 /* Languaje.swift in Sources */,
+				77FEF18B2BC04C250008B590 /* GraphisBar.swift in Sources */,
 				77FEF1882BBF1A900008B590 /* ImgPeopleAndService.swift in Sources */,
 				778C4D6D2BBE091800BAA438 /* ViewModelHome.swift in Sources */,
 			);

@@ -49,6 +49,11 @@ class ViewModelHome: ObservableObject{
     }
     
     func countCertifiedCloud(index: Int)-> Int{
+        
+        if(index == 0){
+            return listSofkianos.count
+        }
+        
         return listSofkianos.filter{ sofkiano in
             sofkiano.certified.contains(CloudService.allList[index].rawValue)
         }.count

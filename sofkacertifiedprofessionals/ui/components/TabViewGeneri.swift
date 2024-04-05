@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct TabViewGeneri: View{
+    @State var filterService: Int = 0
+    
     @Binding var selectedMenuItem: Int
+
     var body: some View{
         TabView(selection: $selectedMenuItem){
-            Home(onMenuItemSelected: { menuItem in
+            Home(onMenuItemSelected: { menuItem, indexFilterSErvice in
+                filterService = indexFilterSErvice
                 selectedMenuItem = menuItem
             })
             .tabItem{
@@ -19,7 +23,7 @@ struct TabViewGeneri: View{
                 Text("Home")
             }.tag(0)
             
-            SearchPeoplePage()
+            SearchPeoplePage(filterService: filterService)
                 .tabItem{
                     Image(systemName: "magnifyingglass")
                     Text("Busqueda")

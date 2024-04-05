@@ -30,7 +30,7 @@ struct DetailPeople: View {
             
             ScrollView{
                 VStack (alignment: .leading){
-                    ImgPeopleAndService(image: people?.img ?? "logo_sofka", listCertified: people?.certified ?? [] ).cornerRadius(50)
+                    ImgPeopleAndService(image: people?.img ?? "logo_sofka", listCertified: people?.certified ?? [] ).cornerRadius(20)
         
                     Text("\(people?.name ?? "") \(people?.lasName ?? "")").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).padding(.vertical,10)
                     

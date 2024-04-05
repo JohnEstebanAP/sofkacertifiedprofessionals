@@ -13,7 +13,7 @@ struct SearchPeoplePage:View {
     
     @State private var selectedButtonIndex: Int = 0
     @State private var listFilterPeoples: [Sofkiano] = []
-    
+    var filterService: Int?
     var listCloudServices: [CloudService] = CloudService.allList
     
     var body: some View {
@@ -22,7 +22,11 @@ struct SearchPeoplePage:View {
             ListViewDetailSofkianos(listSofkianos: listFilterPeoples)
         }
         .background(Color(red:16/255,green:8/255,blue:19/255))
-        .onAppear{ listFilterPeoples = viewModel.listAllSofkianos()}//esta kinea de codigo genera problemas en la previsulisacion pero no en el codigo
+        .onAppear{
+            if(filterService != nil){
+                selectedButtonIndex = filterService ?? 0
+            }
+            listFilterPeoples = viewModel.listAllSofkianos()}//esta kinea de codigo genera problemas en la previsulisacion pero no en el codigo
         .onChange(of: selectedButtonIndex) { index in
             listFilterPeoples = (index == 0)
             ?  viewModel.listAllSofkianos()
@@ -84,11 +88,11 @@ struct ListViewDetailSofkianos: View {
                         VStack{
                             ImgPeopleAndService(image: sofkiano.img, listCertified: sofkiano.certified)
                             
-                            Text("\(sofkiano.name) \(sofkiano.lasName)").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).font(.system(size: 20))
+                            Text("\(sofkiano.name) \(sofkiano.lasName)").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).font(.system(size: 20)).foregroundColor(.black)
                             ForEach(sofkiano.certified, id: \.count){ certified in
                                 Text(certified).foregroundColor(Color(red: 5/255, green: 7/255, blue: 150/255))
                             }
-                            Text(sofkiano.area).fontWeight(.light).font(.system(size: 15))
+                            Text(sofkiano.area).fontWeight(.light).font(.system(size: 15)).foregroundColor(.black)
                         }
                         .background(.white.opacity(0.9))
                         .cornerRadius(20)
