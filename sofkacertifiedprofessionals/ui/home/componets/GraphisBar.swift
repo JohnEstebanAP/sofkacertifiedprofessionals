@@ -10,7 +10,7 @@ import SwiftUI
 struct GraphisBar: View {
     
     @StateObject var viewModel = ViewModelHome()
-    var listObjects: [CloudService]
+    var listObjects: [String]
     var color1: Color
     var color2: Color
     var onOptionSelected: (Int) -> Void
@@ -25,7 +25,7 @@ struct GraphisBar: View {
                 }) {
                     VStack{
                         HStack{
-                            Text(listObjects[index].rawValue)
+                            Text(listObjects[index])
                                 .foregroundColor(Color(red: 230/255, green: 230/255, blue: 230/255))
                                 .padding(.vertical,10)
                                 .padding(.horizontal,15)

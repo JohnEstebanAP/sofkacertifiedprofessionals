@@ -18,7 +18,6 @@ struct DetailPeople: View {
     init(id: String ){
         self.idPeople = id
         self.people = self.viewModel.findPeopleID(idPeople: id)
-        
     }
     
     var body: some View {

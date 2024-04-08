@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Home: View {
     @StateObject var viewModel = ViewModelHome()
-    var listCloudServices: [CloudService] = CloudService.allList
+    var listCloudServices: [String] = CloudService.allList
     var onMenuItemSelected: (Int, Int) -> Void
     let orangeColor = Color.orange // Adjust hue based on text count
     let darkColor = Color(red: 5/255 , green: 6/255, blue: 47/255)
@@ -21,7 +21,7 @@ struct Home: View {
                 VStack{
                     Spacer()
                     Text("Catálogo de nuestros profesionales certificados").fontWeight(.bold).font(.system(size: 20)).padding(.top, 14).padding(.horizontal, 8)
-                    Text("Encuentra nuestros profesionales de Sofka certificados en Microsoft Azure, Amazon Web Services (AWS) y Google Cloud Platform (GCP).")
+                    Text("Buscando ser un aliado estratégico para nuestros clientes, aportando soluciones tecnológicas que impulsen a las empresas a destacarse en entornos cada vez más competitivos.  Brindamos este catálogo con nuestros profesionales de Sofka certificados en tecnologías de punta.")
                         .font(.system(size: 11)).padding(.vertical,14).padding(.horizontal, 8)
                     Image("img_home").resizable().frame(width: 268, height: 228)
                     Spacer()

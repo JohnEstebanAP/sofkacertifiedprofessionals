@@ -21,6 +21,7 @@
 		77C027F82BBB6C5300733650 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C027F72BBB6C5300733650 /* NavigationController.swift */; };
 		77C027FC2BBCBD1800733650 /* SearchPeoplePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C027FB2BBCBD1800733650 /* SearchPeoplePage.swift */; };
 		77C027FF2BBCBEDB00733650 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C027FE2BBCBEDB00733650 /* TopBar.swift */; };
+		77E7E94D2BC41B03008D90F4 /* AreaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E7E94C2BC41B03008D90F4 /* AreaService.swift */; };
 		77F80EC12BBDA045008D8BC5 /* sofkiano.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F80EC02BBDA045008D8BC5 /* sofkiano.swift */; };
 		77F80EC42BBDA2CA008D8BC5 /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F80EC32BBDA2CA008D8BC5 /* CloudService.swift */; };
 		77FEF1842BBF026B0008B590 /* DetailPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FEF1832BBF026B0008B590 /* DetailPeople.swift */; };
@@ -64,6 +65,7 @@
 		77C027F72BBB6C5300733650 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		77C027FB2BBCBD1800733650 /* SearchPeoplePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPeoplePage.swift; sourceTree = "<group>"; };
 		77C027FE2BBCBEDB00733650 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
+		77E7E94C2BC41B03008D90F4 /* AreaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaService.swift; sourceTree = "<group>"; };
 		77F80EC02BBDA045008D8BC5 /* sofkiano.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sofkiano.swift; sourceTree = "<group>"; };
 		77F80EC32BBDA2CA008D8BC5 /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
 		77FEF1832BBF026B0008B590 /* DetailPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPeople.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			children = (
 				77F80EC32BBDA2CA008D8BC5 /* CloudService.swift */,
 				77FEF1852BBF15F70008B590 /* Languaje.swift */,
+				77E7E94C2BC41B03008D90F4 /* AreaService.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				77C027FF2BBCBEDB00733650 /* TopBar.swift in Sources */,
 				778C4D692BBE018500BAA438 /* MenuView.swift in Sources */,
 				77C027F82BBB6C5300733650 /* NavigationController.swift in Sources */,
+				77E7E94D2BC41B03008D90F4 /* AreaService.swift in Sources */,
 				778C4D6B2BBE032A00BAA438 /* SearchablePeople.swift in Sources */,
 				77F80EC42BBDA2CA008D8BC5 /* CloudService.swift in Sources */,
 				77C027C42BBB491C00733650 /* sofkacertifiedprofessionalsApp.swift in Sources */,

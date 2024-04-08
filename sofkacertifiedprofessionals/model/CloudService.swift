@@ -12,9 +12,19 @@ enum CloudService: String, CaseIterable {
     case microsoftAzure = "Microsoft Azure"
     case amazonWebServices = "Amazon Web Services (AWS)"
     case googleCloudPlatform = "Google Cloud Platform (GCP)"
+    case scrum = "Scrum"
+    case rpa = "RPA"
+    case istqb = "ISTQB"
+    case mongo = "Mongo"
     
-    static var allList: [CloudService] {
-        return [.todos, .microsoftAzure, .amazonWebServices, .googleCloudPlatform]
+    
+    static var allList: [String] {
+        var services: [String] = []
+        for service in CloudService.allCases {
+            services.append(service.rawValue)
+            
+        }
+        return services
     }
     
     static var allServices: [String] {
@@ -26,6 +36,6 @@ enum CloudService: String, CaseIterable {
         }
         return services
     }
-
+    
 }
 

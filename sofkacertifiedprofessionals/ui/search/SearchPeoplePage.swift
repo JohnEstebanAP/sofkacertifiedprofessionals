@@ -11,34 +11,34 @@ struct SearchPeoplePage:View {
     
     @StateObject var viewModel = ViewModelHome()
     
-    @State private var selectedButtonIndex: Int = 0
+    @State private var selectedButtonIndexCloud: Int = 0
+    @State private var selectedButtonIndexArea: Int = 0
     @State private var listFilterPeoples: [Sofkiano] = []
     var filterService: Int?
-    var listCloudServices: [CloudService] = CloudService.allList
+    var listCloudServices: [String] = CloudService.allList
+    var listAreaService: [String] = AreaService.allList
     
     var body: some View {
         VStack(alignment: .leading){
-            ListFilterServices(selectedButtonIndex: $selectedButtonIndex, listCloudServices: listCloudServices)
+            ListFilterServices(selectedButtonIndex: $selectedButtonIndexCloud, listItems: listCloudServices)
+            ListFilterServices(selectedButtonIndex: $selectedButtonIndexArea, listItems: listAreaService)
             ListViewDetailSofkianos(listSofkianos: listFilterPeoples)
+            Spacer()
+            
         }
-        .background(Color(red:16/255,green:8/255,blue:19/255))
+        .background(
+            Color(red:16/255,green:8/255,blue:19/255)
+        )
         .onAppear{
             if(filterService != nil){
-                selectedButtonIndex = filterService ?? 0
+                selectedButtonIndexCloud = filterService ?? 0
             }
-            listFilterPeoples = viewModel.listAllSofkianos()}//esta kinea de codigo genera problemas en la previsulisacion pero no en el codigo
-        .onChange(of: selectedButtonIndex) { index in
-            listFilterPeoples = (index == 0)
-            ?  viewModel.listAllSofkianos()
-            :  viewModel.listAllSofkianos().filter { sofks in
-                sofks.certified.contains(
-                    (index == 1)
-                    ? CloudService.microsoftAzure.rawValue
-                    : (index == 2)
-                    ? CloudService.amazonWebServices.rawValue
-                    : CloudService.googleCloudPlatform.rawValue
-                )
-            }
+            listFilterPeoples = viewModel.listAllSofkianos()}
+        .onChange(of: selectedButtonIndexCloud) { index in
+            listFilterPeoples = viewModel.filterByCertified(index: index, areaIndex: selectedButtonIndexArea)
+        }
+        .onChange(of: selectedButtonIndexArea) { index in
+            listFilterPeoples = viewModel.filterByArea(index: index, indexCertified: selectedButtonIndexCloud)
         }
     }
 }
@@ -46,36 +46,37 @@ struct SearchPeoplePage:View {
 struct ListFilterServices : View {
     
     @Binding var selectedButtonIndex: Int
-    var listCloudServices: [CloudService]
+    var listItems: [String]
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
-            HStack{
-                ForEach(0..<listCloudServices.count){ index in
+            HStack() {
+                ForEach(listItems, id: \.self) { item in
                     Button(action: {
-                        selectedButtonIndex = index
+                        if let index = listItems.firstIndex(of: item) {
+                            selectedButtonIndex = index
+                        }
                     }) {
-                        Text(listCloudServices[index].rawValue)
+                        Text(item)
                             .foregroundColor(Color(red: 230/255, green: 230/255, blue: 230/255))
-                            .padding(.vertical,10)
-                            .padding(.horizontal,15)
+                            .padding(.vertical, 10)
+                            .padding(.horizontal, 10)
                             .background(
                                 RoundedRectangle(cornerRadius: 50)
-                                    .fill(selectedButtonIndex == index ? Color.orange : Color.black)
+                                    .fill(selectedButtonIndex == listItems.firstIndex(of: item) ? Color.orange : Color.black)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 50)
                                             .stroke(Color.white, lineWidth: 2)
                                     )
                             )
-                        
-                    }.padding(.top, 20)
-                        .padding(.bottom,20)
-                        .padding(.horizontal,5)
+                    }
                 }
             }
         }
     }
 }
+
+
 
 struct ListViewDetailSofkianos: View {
     var listSofkianos: [Sofkiano]
@@ -96,7 +97,7 @@ struct ListViewDetailSofkianos: View {
                         }
                         .background(.white.opacity(0.9))
                         .cornerRadius(20)
-                    .padding()
+                        .padding()
                     }
                 }
             }.padding(.horizontal)

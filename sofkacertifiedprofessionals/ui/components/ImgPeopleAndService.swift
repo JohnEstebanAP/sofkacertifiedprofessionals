@@ -16,18 +16,47 @@ struct ImgPeopleAndService: View {
             Image(image).resizable().scaledToFit()
             VStack{
                 Spacer()
-                HStack(){
+                HStack(alignment: .bottom){
                     Spacer()
-                    ForEach(listCertified, id: \.count){certified in
-                        Image(
-                            certified == CloudService.amazonWebServices.rawValue
-                            ? "logo_aws"
-                            : certified == CloudService.microsoftAzure.rawValue
-                            ?"logo_azure"
-                            :"logo_google_cloud"
-                        ).resizable().scaledToFit()
-                            .padding(.bottom, 10)
-                            .frame(width: 70)
+                    if (listCertified.count >= 3){
+                        ForEach(0..<3){ index in
+                            Image(
+                                listCertified[index] == CloudService.amazonWebServices.rawValue
+                                ? "logo_aws"
+                                : listCertified[index] == CloudService.microsoftAzure.rawValue
+                                ?"logo_azure"
+                                :"logo_google_cloud"
+                            ).resizable().scaledToFit()
+                                .padding(.bottom, 10)
+                                .frame(width: 70)
+                        }
+                        
+                        HStack{
+                            Circle()
+                                .foregroundColor(.red)
+                                .frame(width: 10)
+                            Circle()
+                                .foregroundColor(.green)
+                                .frame(width: 10)
+                            Circle()
+                                .foregroundColor(.blue)
+                                .frame(width: 10)
+                        }  .padding(.bottom, 10)
+                        
+                        
+                    }else{
+                        ForEach(listCertified, id: \.count){certified in
+                            Image(
+                                certified == CloudService.amazonWebServices.rawValue
+                                ? "logo_aws"
+                                : certified == CloudService.microsoftAzure.rawValue
+                                ?"logo_azure"
+                                :"logo_google_cloud"
+                            ).resizable().scaledToFit()
+                                .padding(.bottom, 10)
+                                .frame(width: 70)
+                        }
+                        
                     }
                     Spacer().frame(width: 10)
                 }
