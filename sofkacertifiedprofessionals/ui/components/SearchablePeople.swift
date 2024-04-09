@@ -12,25 +12,35 @@ struct SearchablePeople: View {
     @StateObject var viewModel = ViewModelHome()
     @State private var searchableText: String = ""
     @State private var isPresente: Bool = true
-    @State private var navigationInProgress: Bool = false
+    @Binding var navigationInProgress: Bool
     var onShowingSearchable: () -> Void
-    
+    @State private var seletion: String?
     @State var listSofkianos: [Sofkiano] = []
     
     var body: some View {
         NavigationView{
             VStack{
-                List(listSofkianos, id: \.id){ sofkiano in
+                List(){
+                    ForEach(listSofkianos, id: \.id){ sofkiano in
                         NavigationLink(
-                           destination: DetailPeople(id: sofkiano.id)){
+                            destination: DetailPeople(id: sofkiano.id),
+                            tag: sofkiano.id,
+                            selection: $seletion
+                        ){
                             Text("\(sofkiano.name) \(sofkiano.lasName) ").foregroundColor(.black)
-                       }  .onAppear {
-                           navigationInProgress = true // Navegación iniciada
-                       }
-                       .onDisappear {
-                           navigationInProgress = false // Navegación finalizada
-                       }
+                        }
+                        .tag(sofkiano.id)
+                        .onTapGesture {
+                            seletion = sofkiano.id
+                            navigationInProgress = true
+                        }
+                        .onAppear(){
+                            navigationInProgress = false
+                            isPresente = true
+                        }
+                    }
                 }
+                
             }
         }
         .searchable(text: $searchableText, isPresented: $isPresente, placement: SearchFieldPlacement.toolbar,
@@ -42,8 +52,6 @@ struct SearchablePeople: View {
         .onChange(of: isPresente, initial: true) { _, isActiveSearchable in
             if !isActiveSearchable && !navigationInProgress {
                 onShowingSearchable()
-            }else{
-                isPresente = true
             }
         }
         .foregroundColor(.white)
