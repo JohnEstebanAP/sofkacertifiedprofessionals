@@ -14,23 +14,39 @@ class Sofkiano {
     var area: String
     var img: String
     var certified: [String]
+    var certifiedImg: [String?]?
     var city: String
     var country: String
-    var yearsExperience: Int
-    var languaje: [Languaje]
+    var timeExperience: Int
+    var languaje: [Languaje?]?
+    var levelLanguaje: String?
     var description: String
+    var weSofkaLink: String?
+    var CvSofkaLink: String?
     
-    init(id: String, name: String, lasName: String, area: String, img: String, certified: [String], city: String, country: String, yearsExperience: Int, languaje: [Languaje], description: String) {
+    init(id: String, name: String, lasName: String, area: String, img: String, certified: [String], certifiedImg: [String?]?, city: String, country: String, timeExperience: Int, languaje: [Languaje], levelLanguaje: String?, description: String, weSofkaLink: String?, CvSofkaLink: String?) {
         self.id = id
         self.name = name
         self.lasName = lasName
         self.area = area
         self.img = img
         self.certified = certified
+        if (certifiedImg != nil){
+            self.certifiedImg = certifiedImg
+        }
         self.city = city
         self.country = country
-        self.yearsExperience = yearsExperience
+        self.timeExperience = timeExperience
         self.languaje = languaje
+        if(levelLanguaje != nil){
+            self.levelLanguaje = levelLanguaje
+        }
         self.description = description
+        if(weSofkaLink != nil){
+            self.weSofkaLink = weSofkaLink!
+        }
+        if(CvSofkaLink != nil){
+            self.CvSofkaLink = CvSofkaLink
+        }
     }
 }

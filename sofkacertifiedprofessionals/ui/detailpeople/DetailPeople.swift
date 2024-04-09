@@ -37,7 +37,7 @@ struct DetailPeople: View {
                         Text(certified).foregroundColor(Color(red: 5/255, green: 7/255, blue: 150/255))
                     }
                     
-                    Text("\(people?.yearsExperience ?? 0) años de experiencia")
+                    Text("\(people?.TimeExperience ?? 0) años de experiencia")
                         .padding(.top,2)
                     Text("___________________________________")
                     Text("Biografía").fontWeight(.bold).padding(.bottom,5)
@@ -58,6 +58,8 @@ struct DetailPeople: View {
                     Text(people?.area ?? "").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).foregroundColor(Color(red: 102/255, green: 102/255, blue: 102/255))
                     
                     Text("\(people?.city ?? ""), \(people?.country ?? "")").padding(.vertical, 10)
+               
+                    CustomSlider(listimg: people?.certified ?? [])
                 }
                 .padding(.horizontal,20)
                 .padding()

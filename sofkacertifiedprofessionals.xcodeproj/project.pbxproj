@@ -22,6 +22,7 @@
 		77C027FC2BBCBD1800733650 /* SearchPeoplePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C027FB2BBCBD1800733650 /* SearchPeoplePage.swift */; };
 		77C027FF2BBCBEDB00733650 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C027FE2BBCBEDB00733650 /* TopBar.swift */; };
 		77DA31F42BC5C1D000684229 /* HelpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DA31F32BC5C1D000684229 /* HelpPage.swift */; };
+		77DA31F72BC5D6F000684229 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DA31F62BC5D6F000684229 /* CustomSlider.swift */; };
 		77E7E94D2BC41B03008D90F4 /* AreaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E7E94C2BC41B03008D90F4 /* AreaService.swift */; };
 		77F80EC12BBDA045008D8BC5 /* sofkiano.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F80EC02BBDA045008D8BC5 /* sofkiano.swift */; };
 		77F80EC42BBDA2CA008D8BC5 /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F80EC32BBDA2CA008D8BC5 /* CloudService.swift */; };
@@ -67,6 +68,7 @@
 		77C027FB2BBCBD1800733650 /* SearchPeoplePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPeoplePage.swift; sourceTree = "<group>"; };
 		77C027FE2BBCBEDB00733650 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		77DA31F32BC5C1D000684229 /* HelpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpPage.swift; sourceTree = "<group>"; };
+		77DA31F62BC5D6F000684229 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		77E7E94C2BC41B03008D90F4 /* AreaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaService.swift; sourceTree = "<group>"; };
 		77F80EC02BBDA045008D8BC5 /* sofkiano.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sofkiano.swift; sourceTree = "<group>"; };
 		77F80EC32BBDA2CA008D8BC5 /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
@@ -226,6 +228,14 @@
 			path = helppage;
 			sourceTree = "<group>";
 		};
+		77DA31F52BC5D6AF00684229 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				77DA31F62BC5D6F000684229 /* CustomSlider.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		77F80EC22BBDA2B4008D8BC5 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +249,7 @@
 		77FEF1822BBF02450008B590 /* detailpeople */ = {
 			isa = PBXGroup;
 			children = (
+				77DA31F52BC5D6AF00684229 /* Components */,
 				77FEF1832BBF026B0008B590 /* DetailPeople.swift */,
 			);
 			path = detailpeople;
@@ -383,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77C027F62BBB6C0E00733650 /* Home.swift in Sources */,
+				77DA31F72BC5D6F000684229 /* CustomSlider.swift in Sources */,
 				77C027FC2BBCBD1800733650 /* SearchPeoplePage.swift in Sources */,
 				778C4D672BBE005200BAA438 /* TabViewGeneri.swift in Sources */,
 				77C027FF2BBCBEDB00733650 /* TopBar.swift in Sources */,
