@@ -12,7 +12,6 @@ struct NavigationController: View {
     @State private var isShowingMenu = false
     @State private var isShowingSearchable = false
     @State private var selectedMenuItem = 0
-    @State var navigationInProgress: Bool = false
     
     var body: some View {
         NavigationView {
@@ -42,7 +41,6 @@ struct NavigationController: View {
                 }
                 if isShowingSearchable {
                     SearchablePeople(
-                        navigationInProgress: $navigationInProgress,
                         onShowingSearchable: {
                         withAnimation {
                             isShowingSearchable.toggle()

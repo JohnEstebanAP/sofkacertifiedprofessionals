@@ -12,7 +12,7 @@ struct SearchablePeople: View {
     @StateObject var viewModel = ViewModelHome()
     @State private var searchableText: String = ""
     @State private var isPresente: Bool = true
-    @Binding var navigationInProgress: Bool
+    @State var navigationInProgress: Bool = false
     var onShowingSearchable: () -> Void
     @State private var seletion: String?
     @State var listSofkianos: [Sofkiano] = []
