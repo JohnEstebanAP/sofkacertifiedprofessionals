@@ -28,23 +28,22 @@ struct HelpPage: View {
                     
                     DetailOffice(city: "Bogotá:", address: "Paralelo 108 Av. Carrera 45 No. 108-27 Torre 2 Oficina 1103")
                     
-                    Text("EE.UU.").fontWeight(.bold).foregroundColor(.white).fontWeight(.bold)
+                    Text("EE.UU.").fontWeight(.bold).foregroundColor(.white).fontWeight(.bold).padding(.top,5)
                     DetailOffice(city: "Miami:", address: "520 Brickell Key One, Unit 1410")
                     
-                    Text("México").fontWeight(.bold).foregroundColor(.white).fontWeight(.bold)
+                    Text("México").fontWeight(.bold).foregroundColor(.white).fontWeight(.bold).padding(.top,5)
                     DetailOffice(city: "Ciudad de México:", address: "Av. paseo de la reforma 284")
                     
-                    Text("Uruguay").fontWeight(.bold).foregroundColor(.white).fontWeight(.bold)
+                    Text("Uruguay").fontWeight(.bold).foregroundColor(.white).fontWeight(.bold).padding(.top,5)
                     DetailOffice(city: "Paysandú:", address: "Salto 919 Paysandú")
                     
-                    Text("Ecuador").fontWeight(.bold).foregroundColor(.white).fontWeight(.bold)
+                    Text("Ecuador").fontWeight(.bold).foregroundColor(.white).fontWeight(.bold).padding(.top,5)
                     DetailOffice(city: "Quito:", address: "Calle Azuay, Intersección Yugoslavia, Piso E2-36")
-                    
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 30)
                 
-                Spacer()
+                Text("Version: 1.0.0").foregroundColor(Color(red: 155/255, green: 155/255, blue: 155/255)).font(.system(size: 12)).padding()
             }
         } .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
             .background(
