@@ -28,10 +28,10 @@ struct TabViewGeneri: View{
                     Image(systemName: "magnifyingglass")
                     Text("Busqueda")
                 }.tag(1)
-            Text("Page profecionales")
+            HelpPage()
                 .tabItem{
-                    Image(systemName: "person.2.fill")
-                    Text("Page profecionales")
+                    Image(systemName:"questionmark.circle.fill")
+                    Text("Ayuda")
                 }.tag(2)
         }
     }

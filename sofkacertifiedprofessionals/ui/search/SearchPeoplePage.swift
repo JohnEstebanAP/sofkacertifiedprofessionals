@@ -20,8 +20,8 @@ struct SearchPeoplePage:View {
     
     var body: some View {
         VStack(alignment: .leading){
-            ListFilterServices(selectedButtonIndex: $selectedButtonIndexCloud, listItems: listCloudServices)
-            ListFilterServices(selectedButtonIndex: $selectedButtonIndexArea, listItems: listAreaService)
+            ListFilterServices(title: "Tecnology:" ,selectedButtonIndex: $selectedButtonIndexCloud, listItems: listCloudServices)
+            ListFilterServices(title: "CoE:" ,selectedButtonIndex: $selectedButtonIndexArea, listItems: listAreaService)
             ListViewDetailSofkianos(listSofkianos: listFilterPeoples)
             Spacer()
             
@@ -45,12 +45,14 @@ struct SearchPeoplePage:View {
 
 struct ListFilterServices : View {
     
+    let title: String
     @Binding var selectedButtonIndex: Int
     var listItems: [String]
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
             HStack() {
+                Text(title).foregroundColor(.white).fontWeight(.bold).padding(.horizontal,10)
                 ForEach(listItems, id: \.self) { item in
                     Button(action: {
                         if let index = listItems.firstIndex(of: item) {
@@ -71,7 +73,7 @@ struct ListFilterServices : View {
                             )
                     }
                 }
-            }
+            }.padding(.horizontal,10)
         }
     }
 }
