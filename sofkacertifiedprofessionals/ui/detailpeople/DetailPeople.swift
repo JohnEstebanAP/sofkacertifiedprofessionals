@@ -30,25 +30,25 @@ struct DetailPeople: View {
             ScrollView{
                 VStack (alignment: .leading){
                     ImgPeopleAndService(image: people?.img ?? "logo_sofka", listCertified: people?.certified ?? [] ).cornerRadius(20)
-        
+                    
                     Text("\(people?.name ?? "") \(people?.lasName ?? "")").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).padding(.vertical,10)
                     
                     ForEach(people?.certified ?? [], id: \.count){ certified in
                         Text(certified).foregroundColor(Color(red: 5/255, green: 7/255, blue: 150/255))
                     }
                     
-                    Text("\(people?.TimeExperience ?? 0) años de experiencia")
+                    Text("\(people?.timeExperience ?? 0) años de experiencia")
                         .padding(.top,2)
                     Text("___________________________________")
                     Text("Biografía").fontWeight(.bold).padding(.bottom,5)
-                 
+                    
                     Text(people?.description ?? "").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).foregroundColor(Color(red: 102/255, green: 102/255, blue: 102/255))
                     
                     Text("Lenguajes").fontWeight(.bold)
                         .padding(.top,10)
                     HStack{
                         ForEach(people?.languaje ?? [], id: \.self){ languaje in
-                            Text("\(languaje.rawValue),")
+                            Text("\(languaje?.rawValue ?? ""),")
                         }
                     }
                     
@@ -58,8 +58,23 @@ struct DetailPeople: View {
                     Text(people?.area ?? "").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).foregroundColor(Color(red: 102/255, green: 102/255, blue: 102/255))
                     
                     Text("\(people?.city ?? ""), \(people?.country ?? "")").padding(.vertical, 10)
-               
-                    CustomSlider(listimg: people?.certified ?? [])
+                    
+                    HStack{
+                        Link(destination: URL(string: "https://wesofka.gointegro.com/gosocial/company/stream")!, label: {
+                            VStack{
+                                Image("logo_wesofka").resizable().scaledToFit().frame(width: 100, height: 50)
+                                Text("WeSofka")
+                            }
+                        })
+                        Link(destination: URL(string: "https://docs.google.com/presentation/d/1S12IvOV9QJ-VP3QkQdQcOF9UBwj6ozHMJ4dlaY3TZWY/edit#slide=id.p1")!, label: {
+                            VStack{
+                                Image("logo_cv").resizable().scaledToFit().frame(width: 50, height: 50)
+                                Text("CV")
+                            }
+                        })
+                    }
+                    
+                    CustomSlider(listimg: people?.certifiedImg ?? [])
                 }
                 .padding(.horizontal,20)
                 .padding()
