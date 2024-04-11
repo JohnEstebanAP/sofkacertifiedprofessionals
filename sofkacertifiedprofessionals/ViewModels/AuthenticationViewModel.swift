@@ -78,39 +78,40 @@ class AuthenticationViewModel: ObservableObject{
         return predicado.evaluate(with: correo)
     }
     
-    func singInWithGoogle2() async ->Bool{
-        guard let clientID = FirebaseApp.app()?.options.clientID else{
-            fatalError("No client ID Found in firebase configuration")
-            return false
-        }
-        let config = GIDConfiguration(clientID: clientID)
-        GIDSignIn.sharedInstance.configuration = config
-        
-        guard let rootViewController = await UIApplication.shared.windows.first?.rootViewController else {
-            print("No hay controlador de vista raíz o ventana principal")
-            return false
-        }
-        
-        do {
-            let userAuthentication = try await  GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController)
-            let user = userAuthentication.user
-            guard let idTokend = user.idToken else{
-                throw AuthenticationError.tokenError(message: "ID token missing")
-            }
-            let accessToken = user.accessToken
-            let credential = GoogleAuthProvider.credential(withIDToken: idTokend.tokenString, accessToken: accessToken.tokenString)
-            
-            let result = try await Auth.auth().signIn(with: credential)
-            let firebaseUser = result.user
-            print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ??  "unknown")")
-            return true
-        }catch{
-            print(error.localizedDescription)
-            errorMessage = error.localizedDescription
-            return false
-        }
-        return false
-    }
+    //Metodo 2 completamente asincrono
+//    func singInWithGoogle2() async ->Bool{
+//        guard let clientID = FirebaseApp.app()?.options.clientID else{
+//            fatalError("No client ID Found in firebase configuration")
+//            return false
+//        }
+//        let config = GIDConfiguration(clientID: clientID)
+//        GIDSignIn.sharedInstance.configuration = config
+//        
+//        guard let rootViewController = await UIApplication.shared.windows.first?.rootViewController else {
+//            print("No hay controlador de vista raíz o ventana principal")
+//            return false
+//        }
+//        
+//        do {
+//            let userAuthentication = try await  GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController)
+//            let user = userAuthentication.user
+//            guard let idTokend = user.idToken else{
+//                throw AuthenticationError.tokenError(message: "ID token missing")
+//            }
+//            let accessToken = user.accessToken
+//            let credential = GoogleAuthProvider.credential(withIDToken: idTokend.tokenString, accessToken: accessToken.tokenString)
+//            
+//            let result = try await Auth.auth().signIn(with: credential)
+//            let firebaseUser = result.user
+//            print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ??  "unknown")")
+//            return true
+//        }catch{
+//            print(error.localizedDescription)
+//            errorMessage = error.localizedDescription
+//            return false
+//        }
+//        return false
+//    }
     
 }
 

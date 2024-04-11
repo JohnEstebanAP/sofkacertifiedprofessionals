@@ -53,46 +53,8 @@ struct NavigationControllerView: View {
             if viewModel.isAuthenticated {
                 NavigationController()
             } else {
-                login()
+                LoginPage()
             }
         }
     }
-}
-
-struct login: View {
-    @EnvironmentObject var viewModel: AuthenticationViewModel
-    @Environment(\.colorScheme) var colorScheme
-    
-    @State private var signInResult: Bool? = nil
-    
-    var body: some View {
-        VStack {
-            Button(action: {
-                viewModel.singInWithGoogle { success in
-                    signInResult = success
-                }
-            }) {
-                Text("Sign in With Google")
-                    .foregroundColor(colorScheme == .dark ? .white : .black)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 8)
-                    .background(alignment: .leading) {
-                        Image("Google").resizable().scaledToFit()
-                            .frame(width: 30, alignment: .center)
-                    }
-            }
-            .buttonStyle(.bordered)
-            .padding()
-            
-            if let result = signInResult {
-                Text("Resultado del login: \(result ? "Éxito" : "Fracaso")")
-                    .foregroundColor(result ? .green : .red)
-            }
-        }
-    }
-}
-
-
-#Preview {
-    login()
 }
