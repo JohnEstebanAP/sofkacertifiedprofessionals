@@ -14,39 +14,37 @@ struct NavigationController: View {
     @State private var selectedMenuItem = 0
     
     var body: some View {
-        NavigationView {
-            ZStack{
-                TopBar(
-                    onShowingMenu: {
-                        withAnimation {
-                            isShowingMenu.toggle()
-                            if (isShowingSearchable){
-                                isShowingSearchable.toggle()
-                            }
-                        }
-                    },
-                    onShowingSearchable:{
-                        withAnimation {
+        ZStack{
+            TopBar(
+                onShowingMenu: {
+                    withAnimation {
+                        isShowingMenu.toggle()
+                        if (isShowingSearchable){
                             isShowingSearchable.toggle()
-                            if(isShowingMenu){
-                                isShowingMenu.toggle()
-                            }
                         }
                     }
-                )
-                TabViewGeneri(selectedMenuItem: $selectedMenuItem)
-                
-                if isShowingMenu {
-                    MenuView(isShowingMenu: $isShowingMenu, selectedMenuItem: $selectedMenuItem)
+                },
+                onShowingSearchable:{
+                    withAnimation {
+                        isShowingSearchable.toggle()
+                        if(isShowingMenu){
+                            isShowingMenu.toggle()
+                        }
+                    }
                 }
-                if isShowingSearchable {
-                    SearchablePeople(
-                        onShowingSearchable: {
+            )
+            TabViewGeneri(selectedMenuItem: $selectedMenuItem)
+            
+            if isShowingMenu {
+                MenuView(isShowingMenu: $isShowingMenu, selectedMenuItem: $selectedMenuItem)
+            }
+            if isShowingSearchable {
+                SearchablePeople(
+                    onShowingSearchable: {
                         withAnimation {
                             isShowingSearchable.toggle()
                         }
                     })
-                }
             }
         }
     }
