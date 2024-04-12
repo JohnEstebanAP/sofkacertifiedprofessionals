@@ -2,17 +2,17 @@
 //  Languaje.swift
 //  sofkacertifiedprofessionals
 //
-//  Created by John Esteban Alvarez Piedrahita on 4/04/24.
+//  Created by John Esteban Alvarez Piedrahita on 12/04/24.
 //
 
 import Foundation
 
-enum Languaje: String, CaseIterable {
-    case español = "Español"
-    case inges = "Inglés"
-    case frances = "Frances"
-    case Portugues = "Portugués"
-    case mandarin = "Mandarín"
-
+class Languaje{
+    var languaje: String
+    var languajeLevel: String
+    
+    init(languaje: String, languajeLevel: String) {
+        self.languaje = languaje
+        self.languajeLevel = languajeLevel
+    }
 }
-

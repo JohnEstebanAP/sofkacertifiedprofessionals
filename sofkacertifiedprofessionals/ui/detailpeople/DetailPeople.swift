@@ -31,33 +31,37 @@ struct DetailPeople: View {
                 VStack (alignment: .leading){
                     ImgPeopleAndService(image: people?.img ?? "logo_sofka", listCertified: people?.certified ?? [] ).cornerRadius(20)
                     
-                    Text("\(people?.name ?? "") \(people?.lasName ?? "")").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).padding(.vertical,10)
+                    Text("\(people?.name ?? "") \(people?.lasName ?? "")").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).padding(.vertical,10).foregroundColor(.black)
                     
                     ForEach(people?.certified ?? [], id: \.count){ certified in
                         Text(certified).foregroundColor(Color(red: 5/255, green: 7/255, blue: 150/255))
                     }
                     
-                    Text("\(people?.timeExperience ?? 0) años de experiencia")
-                        .padding(.top,2)
-                    Text("___________________________________")
-                    Text("Biografía").fontWeight(.bold).padding(.bottom,5)
+                    Text("\(people?.timeExperience ?? 0) meses de experiencia")
+                        .padding(.top,2).foregroundColor(.black)
+                    Text("___________________________________").foregroundColor(.black)
+                    Text("Biografía").fontWeight(.bold).padding(.bottom,5).foregroundColor(.black)
                     
                     Text(people?.description ?? "").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).foregroundColor(Color(red: 102/255, green: 102/255, blue: 102/255))
                     
+                    
                     Text("Lenguajes").fontWeight(.bold)
-                        .padding(.top,10)
-                    HStack{
-                        ForEach(people?.languaje ?? [], id: \.self){ languaje in
-                            Text("\(languaje?.rawValue ?? ""),")
+                        .padding(.top,10).foregroundColor(.black)
+                    
+                    if let languages = people?.languaje {
+                        ForEach(0..<languages.count, id: \.self) { index in
+                            Text("\(languages[index].languaje): \(languages[index].languajeLevel)")
+                                .foregroundColor(.black)
                         }
                     }
                     
                     
+                    
                     Text("Area").fontWeight(.bold)
-                        .padding(.top,10)
+                        .padding(.top,10).foregroundColor(.black)
                     Text(people?.area ?? "").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).foregroundColor(Color(red: 102/255, green: 102/255, blue: 102/255))
                     
-                    Text("\(people?.city ?? ""), \(people?.country ?? "")").padding(.vertical, 10)
+                    Text("\(people?.city ?? ""), \(people?.country ?? "")").padding(.vertical, 10).foregroundColor(.black)
                     
                     HStack{
                         Link(destination: URL(string: "https://wesofka.gointegro.com/gosocial/company/stream")!, label: {
