@@ -29,6 +29,7 @@
 		77C190D02BC74D99002DB73A /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C190CF2BC74D99002DB73A /* AuthenticationViewModel.swift */; };
 		77C190D32BC870BB002DB73A /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C190D22BC870BB002DB73A /* LoginPage.swift */; };
 		77C190D52BC87CB3002DB73A /* TopBarLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C190D42BC87CB3002DB73A /* TopBarLite.swift */; };
+		77C190D82BC8A11B002DB73A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C190D72BC8A11B002DB73A /* Launch Screen.storyboard */; };
 		77DA31F42BC5C1D000684229 /* HelpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DA31F32BC5C1D000684229 /* HelpPage.swift */; };
 		77DA31F72BC5D6F000684229 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DA31F62BC5D6F000684229 /* CustomSlider.swift */; };
 		77E7E94D2BC41B03008D90F4 /* AreaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E7E94C2BC41B03008D90F4 /* AreaService.swift */; };
@@ -80,6 +81,7 @@
 		77C190CF2BC74D99002DB73A /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		77C190D22BC870BB002DB73A /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		77C190D42BC87CB3002DB73A /* TopBarLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarLite.swift; sourceTree = "<group>"; };
+		77C190D72BC8A11B002DB73A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		77DA31F32BC5C1D000684229 /* HelpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpPage.swift; sourceTree = "<group>"; };
 		77DA31F62BC5D6F000684229 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		77E7E94C2BC41B03008D90F4 /* AreaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaService.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		77C027F22BBB6BCA00733650 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				77C190D62BC8A0D4002DB73A /* launchScreen */,
 				77C190D12BC8709E002DB73A /* loginpage */,
 				77DA31F22BC5C07E00684229 /* helppage */,
 				77FEF1822BBF02450008B590 /* detailpeople */,
@@ -248,6 +251,14 @@
 				77C190D22BC870BB002DB73A /* LoginPage.swift */,
 			);
 			path = loginpage;
+			sourceTree = "<group>";
+		};
+		77C190D62BC8A0D4002DB73A /* launchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				77C190D72BC8A11B002DB73A /* Launch Screen.storyboard */,
+			);
+			path = launchScreen;
 			sourceTree = "<group>";
 		};
 		77DA31F22BC5C07E00684229 /* helppage */ = {
@@ -409,6 +420,7 @@
 			files = (
 				77C027CD2BBB491E00733650 /* Preview Assets.xcassets in Resources */,
 				77C027CA2BBB491E00733650 /* Assets.xcassets in Resources */,
+				77C190D82BC8A11B002DB73A /* Launch Screen.storyboard in Resources */,
 				77C190CE2BC72A07002DB73A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,15 +627,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"sofkacertifiedprofessionals/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sofkacertifiedprofessionals/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Verifica Tu Sofkiano";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -644,15 +659,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"sofkacertifiedprofessionals/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sofkacertifiedprofessionals/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Verifica Tu Sofkiano";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

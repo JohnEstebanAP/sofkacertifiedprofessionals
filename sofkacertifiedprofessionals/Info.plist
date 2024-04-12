@@ -16,5 +16,7 @@
 	</array>
 	<key>GIDClientID</key>
 	<string>953320079574-ivopqi74vpi84trlknh9jeo5q3h0bu7h.apps.googleusercontent.com</string>
+	<key>CFBundleDisplayName</key>
+	<string>Valida tu Sofkiano</string>
 </dict>
 </plist>

@@ -29,11 +29,7 @@ struct LoginPage:View {
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                 .offset(x:-254,y: 0)
                 .overlay(Color.black.opacity(0.8))
-            
-            //TopBarLite()
-            
-            
-            
+     
             VStack(alignment: .center) {
                 Image("sofka_logo").resizable().scaledToFit().padding(50)
                 Spacer()
@@ -62,7 +58,7 @@ struct LoginPage:View {
                 .padding()
                 
                 if let result = signInResult {
-                    Text("Resultado del login: \(result ? "Éxito" : "Fracaso")")
+                    Text("Correo electrónico inválido")
                         .foregroundColor(result ? .green : .red)
                 }
                 Spacer()
